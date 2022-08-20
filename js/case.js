@@ -30,10 +30,12 @@ function updateCaseTotalPrice(newCaseNumber){
 document.getElementById('btn-case-plus').addEventListener('click', function(event){
     const newCaseNumber = updateCaseNumber(true);
     updateCaseTotalPrice(newCaseNumber);
+    calculateSubTotal();
 });
 
 // code for minus button
 document.getElementById('btn-case-minus').addEventListener('click', function(){
     const newCaseNumber = updateCaseNumber(false);
     updateCaseTotalPrice(newCaseNumber);
+    calculateSubTotal();
 })
